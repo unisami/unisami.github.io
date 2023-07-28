@@ -1,0 +1,216 @@
+
+:root{
+    --bg: #111;
+}
+
+*{margin: 0;padding: 0;}
+*::selection{
+    color: #111;
+    background: #fff;
+    opacity: 0;
+}
+
+body{
+    background: var(--bg);
+    font: 1.2em/1.25 Verdana, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+
+.headerContent{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 0fr .05fr .2fr;
+    text-align: center;
+}
+
+#slogan{
+    font-size: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.crimson{
+    color: crimson;
+}
+
+.yellow{
+    color: gold;
+}
+
+#basicInfo{
+    width: 55%;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+/* Count on Us */
+
+.countOnUs > .container{
+    display: grid;
+    grid-template-rows: 0fr .8fr;
+    height: 100vh;
+}
+
+.title{
+    display: block;
+    background: #000;
+    padding: 12px 18px;
+    border-radius: 12px;
+}
+
+.info{
+    display: flex;
+    gap: 25px;
+}
+
+.OurInfo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 80%;
+}
+
+
+/* Services */
+
+#serviceInfo{
+    padding: 20px;
+    width: 85%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cen{
+    display: flex;
+    align-items: center;
+}
+
+.service{
+    position: relative;
+    display: grid;
+}
+
+.service > img{
+    place-self: center;
+    align-self: center;
+}
+
+.serviceName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 17px;
+    color: #111;
+    text-align: center;
+}
+
+/* Projects */
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+}
+
+/* Companies */
+
+.companies{
+    display: grid;
+    grid-template-columns: .6fr .6fr;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.company{
+    font-size: 15px;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: .5px solid #fff;
+}
+
+.companyName{
+    transition: all 250ms ease-in;
+    user-select: none;
+    color: lightcoral;
+}
+
+.companyName:hover{
+    color: coral;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #000;
+    padding: 15px;
+}
+
+.cTitle{
+    font-size: 35px;
+}
+
+.contacts > a > img{
+    width: 40px;
+}
+
+.contacts > a{
+    margin: 0;
+}
+
+
+@media(max-width: 920px){
+    .info{
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .OurInfo{
+        font-size: 25px;
+    }
+    .companies{
+        grid-template-columns: 1fr;
+    }
+    .project{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+}
